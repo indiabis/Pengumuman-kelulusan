@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Kelulusan SMP Negeri 6 Batang Hari</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0a2463',
+                        secondary: '#1e3a8a',
+                        accent: '#3b82f6',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3QgaWQ9InBhdHRlcm4tYmFja2dyb3VuZCIgd2lkdGg9IjQwMCUiIGhlaWdodD0iNDAwJSIgZmlsbD0icmdiYSgyNDgsIDI1MCwgMjUyLCAxKSI+PC9yZWN0PjxwYXRoIGZpbGw9InJnYmEoMjI5LCAyMzEsIDIzNSwgMC41KSIgZD0iTTAgMGg0MHY0MEgweiI+PC9wYXRoPjxwYXRoIGZpbGw9InJnYmEoMjQ4LCAyNTAsIDI1MiwgMSkiIGQ9Ik0wIDBoMjB2MjBIMHoiPjwvcGF0aD48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IGZpbGw9InVybCgjcGF0dGVybikiIGhlaWdodD0iMTAwJSIgd2lkdGg9IjEwMCUiPjwvcmVjdD48L3N2Zz4=');
+            background-attachment: fixed;
+        }
+        .graduation-cap {
+            filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+        }
+        .result-card {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .loading {
+            display: none;
+        }
+        .spinner {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background-color: #0a2463;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .countdown-number {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        .countdown-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-center md:justify-between bg-white rounded-lg shadow-lg p-4 mb-8">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://freeimghost.net/images/2025/05/31/Removal-71-1.png" alt="Logo SMP Negeri 6 Batang Hari" class="h-20 md:h-24 mr-4">
+                <div>
+                    <h2 class="text-primary font-bold text-lg md:text-xl">SMP NEGERI 6 BATANG HARI</h2>
+                    <p class="text-gray-600 text-xs md:text-sm">Jln. Sei. Abang Km.5 Muara Tembesi, Kab. Batang Hari</p>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <svg class="graduation-cap w-10 h-10 md:w-12 md:h-12 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998a12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                </svg>
+                <span class="ml-2 text-primary font-semibold text-sm md:text-base">Tahun Ajaran 2024/2025</span>
+            </div>
+        </header>
+
+        <!-- Countdown Timer -->
+        <div id="countdownSection" class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-8">
+            <div class="text-center mb-6">
+                <h2 class="text-xl md:text-2xl font-bold text-primary mb-2">Pengumuman Kelulusan</h2>
+                <p class="text-gray-600" id="countdownMessage">Pengumuman akan dibuka pada 2 Juni 2025 pukul 15:00 WIB</p>
+            </div>
+            
+            <div class="flex justify-center gap-4 mb-6">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex flex-col lg:flex-row gap-8">
+            <!-- Left Column - Login Form -->
+            <div class="w-full lg:w-1/2">
+                <div id="loginContainer" class="bg-white rounded-lg shadow-lg p-6 md:p-8" style="display: none;">
+                    <div class="text-center mb-8">
+                        <h1 class="text-2xl md:text-3xl font-bold text-primary mb-2">Pengumuman Kelulusan</h1>
+                        <h2 class="text-xl md:text-2xl font-semibold text-secondary mb-6">SMP Negeri 6 Batang Hari</h2>
+                        <p class="text-gray-600">Silakan masukkan NISN dan tanggal lahir untuk melihat hasil kelulusan Anda</p>
+                    </div>
+
+                    <form id="loginForm" class="space-y-6">
+                        <div>
+                            <label for="nisn" class="block text-sm font-medium text-gray-700 mb-1">NISN</label>
+                            <input type="text" id="nisn" name="nisn" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent" placeholder="Masukkan NISN Anda" required>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Lahir</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <div>
+                                    <label for="tanggal" class="block text-xs text-gray-500 mb-1">Tanggal</label>
+                                    <input type="number" id="tanggal" name="tanggal" min="1" max="31" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent" placeholder="DD" required>
+                                </div>
+                                <div>
+                                    <label for="bulan" class="block text-xs text-gray-500 mb-1">Bulan</label>
+                                    <input type="number" id="bulan" name="bulan" min="1" max="12" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent" placeholder="MM" required>
+                                </div>
+                                <div>
+                                    <label for="tahun" class="block text-xs text-gray-500 mb-1">Tahun</label>
+                                    <input type="number" id="tahun" name="tahun" min="1990" max="2020" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent" placeholder="YYYY" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 px-4 rounded-md transition duration-300 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                Lihat Hasil Kelulusan
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="loading mt-6 text-center">
+                        <div class="flex justify-center">
+                            <svg class="spinner w-10 h-10 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                        </div>
+                        <p class="mt-2 text-gray-600">Mohon tunggu, sedang memproses data...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Result Card -->
+            <div class="w-full lg:w-1/2">
+                <div id="resultCard" class="result-card bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <div class="text-center mb-6">
+                        <div class="inline-block p-3 rounded-full bg-primary mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-primary mb-1">Hasil Kelulusan</h3>
+                        <p class="text-gray-600">SMP Negeri 6 Batang Hari Tahun 2024/2025</p>
+                    </div>
+
+                    <div class="border-t border-b border-gray-200 py-4 mb-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="text-sm text-gray-500">Nama Lengkap</p>
+                                <p id="nama" class="font-semibold text-gray-800">-</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">NISN</p>
+                                <p id="nisnResult" class="font-semibold text-gray-800">-</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="statusLulus" class="text-center p-4 rounded-lg bg-green-50 border border-green-200 mb-6 hidden">
+                        <div class="flex justify-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-green-700 mb-1">SELAMAT! ANDA DINYATAKAN LULUS</h4>
+                        <p class="text-green-600">Dari SMP Negeri 6 Batang Hari Tahun Ajaran 2024/2025</p>
+                    </div>
+
+                    <div id="statusTidakLulus" class="text-center p-4 rounded-lg bg-red-50 border border-red-200 mb-6 hidden">
+                        <div class="flex justify-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-red-700 mb-1">MAAF, ANDA DINYATAKAN TIDAK LULUS</h4>
+                        <p class="text-red-600">Dari SMP Negeri 6 Batang Hari Tahun Ajaran 2024/2025</p>
+                    </div>
+
+                    <div id="dataTidakDitemukan" class="text-center p-4 rounded-lg bg-yellow-50 border border-yellow-200 mb-6 hidden">
+                        <div class="flex justify-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-bold text-yellow-700 mb-1">DATA TIDAK DITEMUKAN</h4>
+                        <p class="text-yellow-600">NISN atau tanggal lahir yang Anda masukkan tidak valid</p>
+                    </div>
+
+                    <!-- Principal's Message -->
+                    <div id="principalMessage" class="bg-blue-50 p-4 rounded-lg border border-blue-100 mb-6 hidden">
+                        <h4 class="text-lg font-bold text-primary mb-2">Sambutan Kepala Sekolah</h4>
+                        <p class="text-gray-700 text-sm mb-3">
+                            "Selamat dan sukses kepada siswa-siswi kelas 9 SMP Negeri 6 Batang Hari Tahun Ajaran 2024/2025 yang telah menyelesaikan pendidikan selama 3 tahun dengan penuh semangat dan dedikasi. Semoga ilmu yang didapat menjadi bekal yang berharga untuk jenjang berikutnya. Kami semua bangga atas perjuangan kalian semua."
+                        </p>
+                        <div class="text-right">
+                            <p class="text-primary font-semibold text-sm">
+                                Kepala Sekolah SMP Negeri 6 Batang Hari
+                            </p>
+                            <p class="text-primary font-bold text-sm">
+                                Tilawati, S.Pd
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button id="checkAgainBtn" class="inline-flex items-center px-4 py-2 border border-primary text-primary bg-white hover:bg-primary hover:text-white font-medium rounded-md transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                            Periksa Data Lain
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Decoration for empty state -->
+                <div id="decorationCard" class="bg-white rounded-lg shadow-lg p-6 md:p-8 text-center">
+                    <svg class="graduation-cap w-24 h-24 mx-auto text-primary opacity-20 mb-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998a12.078 12.078 0 01.665-6.479L12 14z" />
+                        <path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998a12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                    </svg>
+                    <h3 class="text-xl font-semibold text-gray-400 mb-2">Hasil Kelulusan</h3>
+                    <p class="text-gray-400">Masukkan NISN dan tanggal lahir untuk melihat hasil kelulusan Anda</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 bg-primary text-white rounded-lg shadow-lg p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">SMP NEGERI 6 BATANG HARI</h3>
+                    <p class="text-sm text-gray-200">Jln. Sei. Abang Km.5 Muara Tembesi, Kampung Baru Km 5, Kec. Muara Tembesi, Kab. Batang Hari Prov. Jambi, Kode Pos 36653</p>
+                </div>
+                <div class="md:text-right">
+                    <h3 class="text-lg font-semibold mb-2">Kontak</h3>
+                    <p class="text-sm text-gray-200">Email: smpn6batanghari@gmail.com</p>
+                </div>
+            </div>
+            <div class="mt-6 pt-4 border-t border-blue-800 text-center text-sm text-gray-300">
+                &copy; 2024 SMP Negeri 6 Batang Hari. Hak Cipta Dilindungi.
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const resultCard = document.getElementById('resultCard');
+            const decorationCard = document.getElementById('decorationCard');
+            const loading = document.querySelector('.loading');
+            const checkAgainBtn = document.getElementById('checkAgainBtn');
+            const loginContainer = document.getElementById('loginContainer');
+            const principalMessage = document.getElementById('principalMessage');
+            
+            // Elements for displaying student data
+            const namaElement = document.getElementById('nama');
+            const nisnResultElement = document.getElementById('nisnResult');
+            
+            // Status elements
+            const statusLulus = document.getElementById('statusLulus');
+            const statusTidakLulus = document.getElementById('statusTidakLulus');
+            const dataTidakDitemukan = document.getElementById('dataTidakDitemukan');
+            
+            // Countdown elements
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+            const countdownMessage = document.getElementById('countdownMessage');
+            
+            // Student data cache
+            let studentsData = [];
+            
+            // Set the release date (2 Juni 2025 pukul 15:00 WIB)
+            const releaseDate = new Date('Juni 2, 2025 15:00:00 GMT+0700').getTime();
+            
+            // Update the countdown every 1 second
+            const countdownTimer = setInterval(updateCountdown, 1000);
+            
+            // Initial countdown update
+            updateCountdown();
+            
+            // Fetch student data when page loads
+            fetchStudentData();
+            
+            function updateCountdown() {
+                // Get current date and time
+                const now = new Date().getTime();
+                
+                // Find the distance between now and the release date
+                const distance = releaseDate - now;
+                
+                // Time calculations for days, hours, minutes and seconds
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                // Display the result
+                daysElement.textContent = String(days).padStart(2, '0');
+                hoursElement.textContent = String(hours).padStart(2, '0');
+                minutesElement.textContent = String(minutes).padStart(2, '0');
+                secondsElement.textContent = String(seconds).padStart(2, '0');
+                
+                // If the countdown is finished, show the login form
+                if (distance < 0) {
+                    clearInterval(countdownTimer);
+                    daysElement.textContent = "00";
+                    hoursElement.textContent = "00";
+                    minutesElement.textContent = "00";
+                    secondsElement.textContent = "00";
+                    countdownMessage.textContent = "Pengumuman sudah dibuka!";
+                    loginContainer.style.display = "block";
+                }
+            }
+            
+            function fetchStudentData() {
+                fetch('https://sheetdb.io/api/v1/xa092gz3kpk9h')
+                    .then(response => response.json())
+                    .then(data => {
+                        studentsData = data;
+                    })
+                    .catch(error => {
+                        console.error('Error fetching student data:', error);
+                    });
+            }
+            
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const nisn = document.getElementById('nisn').value;
+                const tanggal = document.getElementById('tanggal').value.padStart(2, '0');
+                const bulan = document.getElementById('bulan').value.padStart(2, '0');
+                const tahun = document.getElementById('tahun').value;
+                
+                // Show loading
+                loading.style.display = 'block';
+                
+                // Simulate loading time
+                setTimeout(() => {
+                    // Find student by NISN
+                    const student = studentsData.find(s => s.NISN === nisn);
+                    
+                    // Hide loading
+                    loading.style.display = 'none';
+                    
+                    // Hide decoration card and show result card
+                    decorationCard.style.display = 'none';
+                    resultCard.style.display = 'block';
+                    
+                    // Hide all status messages initially
+                    statusLulus.classList.add('hidden');
+                    statusTidakLulus.classList.add('hidden');
+                    dataTidakDitemukan.classList.add('hidden');
+                    principalMessage.classList.add('hidden');
+                    
+                    if (student) {
+                        // Format the date from student data for comparison
+                        const birthDateParts = student['TANGGAL LAHIR'].split('/');
+                        const studentDay = birthDateParts[0];
+                        const studentMonth = birthDateParts[1];
+                        const studentYear = birthDateParts[2];
+                        
+                        // Check if birth date matches
+                        if (tanggal === studentDay && bulan === studentMonth && tahun === studentYear) {
+                            // Display student data - only name and NISN
+                            namaElement.textContent = student.NAMA;
+                            nisnResultElement.textContent = student.NISN;
+                            
+                            // Show appropriate status
+                            if (student.STATUS === 'LULUS') {
+                                statusLulus.classList.remove('hidden');
+                                // Show principal's message only for graduates
+                                principalMessage.classList.remove('hidden');
+                            } else {
+                                statusTidakLulus.classList.remove('hidden');
+                            }
+                        } else {
+                            // Birth date doesn't match
+                            dataTidakDitemukan.classList.remove('hidden');
+                        }
+                    } else {
+                        // Student not found
+                        dataTidakDitemukan.classList.remove('hidden');
+                    }
+                }, 1500);
+            });
+            
+            checkAgainBtn.addEventListener('click', function() {
+                // Reset form
+                loginForm.reset();
+                
+                // Hide result card and show decoration card
+                resultCard.style.display = 'none';
+                decorationCard.style.display = 'block';
+            });
+            
+            // For testing purposes - uncomment to bypass the countdown timer
+            // loginContainer.style.display = "block";
+        });
+    </script>
+</body>
+</html>
